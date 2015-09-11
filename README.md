@@ -73,6 +73,3 @@ First 2 bytes of the packet. | Next 2 bytes after the header. | 4th byte of the 
 - http://github.com/itsexe/ for teaching me about StreetGear's packets and helping me with login.
 - https://github.com/skeezr/ for helping me with TCP sockets and SilverSock.
 - http://www.elitepvpers.com/forum/members/4193997-k1ramox.html for packets encryption offsets. 
-
-# Notes
-I'm not the only one to work on a StreetGears Emulator, this is the original project that pushed me to work on my own emulator: http://www.elitepvpers.com/forum/private-server-discussions-questions/3686146-dev-street-gears-emulator.html
