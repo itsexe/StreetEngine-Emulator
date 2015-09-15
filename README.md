@@ -13,7 +13,7 @@ Note: This is my first time with packet.
   - [Packets](#packets-informations)
 - [**Community**](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
   - [Isssues ticket](https://github.com/greatmaes/StreetEngine-Emulator/issues)
-  - [Wikio](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
+  - [Wiki](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
 
 ### Database (*Setup*)
 
