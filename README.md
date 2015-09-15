@@ -11,9 +11,9 @@ Note: This is my first time with packet.
 - [**Informations**](#database-informations)
   - [Database](#database-informations)
   - [Packets](#packets-informations)
-- [**Community**]
+- [**Community**](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
   - [Isssues ticket](https://github.com/greatmaes/StreetEngine-Emulator/issues)
-  - [Media](https://github.com/greatmaes/StreetEngine-Emulator/wiki/Media)
+  - [Wikio](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
 
 ### Database (*Setup*)
 
