@@ -5,15 +5,15 @@ StreetEngine is a non-profit server side emulator for the game StreetGears. This
 
 Note: This is my first time with packet.
 
-- [**Setup**](#database-setup)
-  - [MySQL Database installation](#database-setup)
-  - [StreetEngine setup](#streetengine-setup)
-- [**Informations**](#database-informations)
-  - [Database](#database-informations)
-  - [Packets](#packets-informations)
-- [**Community**](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
-  - [Isssues tracker](https://github.com/greatmaes/StreetEngine-Emulator/issues)
-  - [Wiki](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
+- [**1. Setup**](#database-setup)
+  - [1.1 MySQL Database installation](#database-setup)
+  - [1.2 StreetEngine setup](#streetengine-setup)
+- [**2. Informations**](#database-informations)
+  - [2.1 Database](#database-informations)
+  - [2.2 Packets](#packets-informations)
+- [**3. Community**](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
+  - [3.1 Isssues tracker](https://github.com/greatmaes/StreetEngine-Emulator/issues)
+  - [3.2 Wiki](https://github.com/greatmaes/StreetEngine-Emulator/wiki)
 
 ### Database (*Setup*)
 
