@@ -63,9 +63,9 @@ char_zoneid   | (int) Player's country.
 char_zoneinfo   | (string) Player's country info.
 
 ### Packets (*Informations*)
-Header | Lenght | Hash
+Lenght | Header | Hash
 ------ | ------ | ----
-First 2 bytes of the packet. | Next 2 bytes after the header. | 4th byte of the packet (the last one).
+First 2 bytes of the packet. | Next 2 bytes after the lenght. | 4th byte of the packet (the last one).
 
 # Binaries
 - [**Lastest update (v1.0.0.0)**](https://github.com/greatmaes/StreetEngine-Emulator/releases/tag/1.0.0.0)
