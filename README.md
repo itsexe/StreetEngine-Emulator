@@ -1,5 +1,5 @@
 # StreetEngine-Emulator
-[![StreetEngine Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/greatmaes/StreetEngine-Emulator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![StreetEngine Chat](https://img.shields.io/badge/StreetEngine-JOIN%20CHAT%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/greatmaes/StreetEngine-Emulator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge) ![Version](https://img.shields.io/badge/Version-1.0.0.0-brightgreen.svg?style=flat-square) ![Platform](https://img.shields.io/badge/Platform-windows%208%20%7C%20windows%2010-brightgreen.svg?style=flat-square)
 
 *Sorry for bad english grammar, this is not my native language, I did my best.*
 
