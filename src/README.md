@@ -22,17 +22,17 @@ Note: This is my first time with packet.
 
 First you will need to create a MySQL Database. I use [this website](http://www.freemysqlhosting.net/) for a quick and free database to test my stuff, you can also use a local database. Then just restore my sql file to your server using Navicat (or any database manager) like this.
 
-![Image1](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/executesql-1.jpg)
-![Image2](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/executesql-2.jpg)
+![Image1](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/executesql-1.jpg)
+![Image2](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/executesql-2.jpg)
 
 Passwords must be MD5 hashed (See changelog: 1.0.0.1). You can use any web based encrypter to do this.
 I use "*MD5Encryption.com*" in this example. (Bad website because you can decrypt hash as they save what you encrypt in a database)
 
-![Image3](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/md5-encryption.jpg)
+![Image3](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/md5-encryption.jpg)
 
 Now simply copy your MD5 hashed password and paste it in your database. (Must be upper case)
 
-![Image4](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/md5-encryption-2.jpg)
+![Image4](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/md5-encryption-2.jpg)
 
 Once it's done configure the database part of the config.ini file with your informations like this.
 
@@ -48,7 +48,7 @@ Database=YOUR_DB_NAME
 
 Place every files you downloaded in your StreetGears folder.
 
-![Image5](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/Screenshot-4.jpg)
+![Image5](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/Screenshot-4.jpg)
 
 Finally, start "*StreetEngine.exe*" and inject "*KiLLer.dll*" using Winject or any DLL injector to disable packets encryption.
 
@@ -56,7 +56,7 @@ Finally, start "*StreetEngine.exe*" and inject "*KiLLer.dll*" using Winject or a
 
 If you have any problem running both game and emulator on windows 7/vista/xp then try to change comptability settings to "*Windows 95*" of both game and emulator like this, this may help.
 
-![Image6](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/EngineAssets/Screenshots/comptability.jpg)
+![Image6](https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/src/EngineAssets/Screenshots/comptability.jpg)
 
 ### Database (*Informations*)
 Key | Description
@@ -90,9 +90,9 @@ Lenght | Header | Hash
 First 2 bytes of the packet. | Next 2 bytes after the lenght. | 5th byte of the packet (the last one).
 
 # Binaries
-- [**Lastest update (v1.0.0.1)**](https://github.com/greatmaes/StreetEngine-Emulator/releases/tag/1.0.0.0)
-  - [Binary](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.0/StreetEngine-Emulator-Binary.rar)
-  - [Full Source Code](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.0/StreetEngine-Emulator-Full-Source.rar)
+- [**Lastest update (v1.0.0.1)**](https://github.com/greatmaes/StreetEngine-Emulator/releases/tag/1.0.0.1)
+  - [Binary](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.1/StreetEngine-Emulator-Binary.rar)
+  - [Full Source Code](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.1/StreetEngine-Emulator-Full-Source.rar)
 - [**Update v1.0.0.0**](https://github.com/greatmaes/StreetEngine-Emulator/releases/tag/1.0.0.0)
   - [Binary](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.0/StreetEngine-Emulator-Binary.rar)
   - [Full Source Code](https://github.com/greatmaes/StreetEngine-Emulator/releases/download/1.0.0.0/StreetEngine-Emulator-Full-Source.rar)
