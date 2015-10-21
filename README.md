@@ -101,3 +101,5 @@ First 2 bytes of the packet. | Next 2 bytes after the lenght. | 5th byte of the 
 - http://github.com/itsexe/ teached me about StreetGear's packets and helping me with login.
 - https://github.com/skeezr/helped me with TCP sockets and SilverSock.
 - http://www.elitepvpers.com/forum/members/4193997-k1ramox.html for packets encryption offsets. (*Killer dll*)
+
+[![Donate](https://www.coinbase.com/assets/buttons/donation_small-210ad5fe8fe0846a0c6bc676e1bad3d462ab3fcbdaf2443de8755503d0729847.png)](https://blockchain.info/address/1Lma7Q29EjQhrQUtRk1A79Ve5HfGuBnzFb)
