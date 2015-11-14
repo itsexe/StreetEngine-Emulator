@@ -129,22 +129,29 @@ namespace StreetEngine.EngineDatabase
 
             Reader = null; // We must null the reader before opening any connection
 
-            try { 
+            try
+            {
                 mysql_connection.Open(); // Open the connection
                 Reader = mysql_command.ExecuteReader(); // And finally initalize our reader
 
-                while (Reader.Read()) { // Reader is reading so we must close it once its finished
+                while (Reader.Read())
+                {
+                    // Reader is reading so we must close it once its finished
                     usersList.Add(Reader["id"].ToString()); // Add every id to our user list
                     usernames.Add(Reader["user"].ToString()); // Add every username to our user list
                 }
                 Event.Invoke("Connection etablished"); // Simple message
 
-                if(usersList.Count > 1 || usersList.Count > usersList.Count + 1) // Check if the user list is over 1
+                if (usersList.Count > 1 || usersList.Count > usersList.Count + 1) // Check if the user list is over 1
                     multiple = "s"; // if so add a 's' to user
 
                 Event.Invoke("'" + usersList.Count + "' User" + multiple + " loaded"); // Optional message
 
-            Reader.Close(); // Close the reader
+                Reader.Close(); // Close the reader
+            }
+            catch (MySqlException)
+            {
+                Error.Invoke("Could not connect to MySQL! Please check your Databasesettings!");
             }
             catch (Exception x) 
             { 
