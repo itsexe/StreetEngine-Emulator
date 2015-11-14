@@ -92,6 +92,10 @@ namespace StreetEngine.Engine.Network
         {
             try
             {
+                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt"))
+                {
+                    File.Create(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt");
+                }
                 StreamReader Reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt");
                 lock (Clients)
                 {
