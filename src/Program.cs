@@ -17,6 +17,11 @@
  *                                                               *
  ***************************************************************** 
 */
+
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
+using StreetEngine.EngineConsole;
+
 namespace StreetEngine
 {
     using System;
@@ -104,8 +109,26 @@ namespace StreetEngine
             Engine.Network.mmoServer.Start();
 
             // Start StreetGears
-            Process.Start("StreetGear.exe", "/enc /locale:" + EngineEnum.LauncherEnum.Locale.locale_fr + " /auth_ip:" + EngineConfig.IniConfig.Ini.Elements["Auth"]["Host"] + " /auth_port:" + EngineConfig.IniConfig.Ini.Elements["Auth"]["Port"] + " /window /debug");
-
+            try
+            {
+                ProcessStartInfo sgInfo = new ProcessStartInfo(EngineConfig.IniConfig.Ini.Elements["GameSettings"]["gameLocation"] + "StreetGear.exe");
+                sgInfo.Arguments = string.Format("/enc /locale:{0} /auth_ip:{1} /auth_port:{2} /window /debug /log", EngineEnum.LauncherEnum.Locale.GetLocationFromConfig(), EngineConfig.IniConfig.Ini.Elements["Auth"]["Host"], EngineConfig.IniConfig.Ini.Elements["Auth"]["Port"]);
+                Process.Start(sgInfo);
+            }
+            catch (FileNotFoundException)
+            {
+                Log.Append("Error", "Could not find Streetgears.exe! Please check config.ini", ConsoleColor.Black,
+                    ConsoleColor.Red);
+            }
+            catch (KeyNotFoundException)
+            {
+                Log.Append("Error", "There is something wrong with your config.ini. Please check the [GameSettings] section.", ConsoleColor.Black,
+     ConsoleColor.Red);
+            }
+            catch (Exception ex)
+            {
+                Log.Append("Error", "Could not start Game!" + Environment.NewLine + ex.ToString(), ConsoleColor.Black, ConsoleColor.Red);
+            }
             Console.ReadKey();
         }
     }

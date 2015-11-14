@@ -36,10 +36,20 @@ namespace StreetEngine.EngineEnum
     {
         public class Locale
         {
-            public static string
-            locale_fr = "CP1147",
-            locale_de = "CP1141",
-            locale_korea = "CP949";
+            public static string GetLocationFromConfig()
+            {
+                switch (EngineConfig.IniConfig.Ini.Elements["GameSettings"]["language"])
+                {
+                    case "de":
+                        return "cp1141";
+                    case "fr":
+                        return "CP1147";
+                    case "kr":
+                        return "CP949";
+                }
+                //If there is no valid config, the game will start in french
+                return "CP1147";
+            }
         }
     }
 }

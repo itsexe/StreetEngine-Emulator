@@ -147,6 +147,12 @@ startLevel = 45
 startLiscence = 4
 startType = 3
 MaximumUsers = 500
+
+; Settings of the Client
+; Language must be fr, de or kr
+[GameSettings]
+language=fr
+gameLocation=C:\the\folder\of\streetgears\
 ");
                 Event.Invoke("Config.ini created. Please check your SQL Settings!");
             }
