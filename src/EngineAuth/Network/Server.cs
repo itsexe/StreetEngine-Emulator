@@ -92,6 +92,10 @@ namespace StreetEngine.Engine.Network
         {
             try
             {
+                if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt"))
+                {
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt","127.0.0.1");
+                }
                 StreamReader Reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\whitelist.txt");
                 lock (Clients)
                 {
@@ -106,6 +110,7 @@ namespace StreetEngine.Engine.Network
                     else
                     {
                         Error.Invoke("'" + socket.IP + "', is not whitelisted yet."); // Optional
+                        
                     }
                     Reader.Dispose(); // Optional
                 }

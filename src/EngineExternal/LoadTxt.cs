@@ -55,7 +55,25 @@ namespace StreetEngine.EngineExternal
             {
                 try
                 {
-                    StreamReader Reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "world\\" + filename);
+                    string channeltxt = AppDomain.CurrentDomain.BaseDirectory + "world\\" + filename;
+                    if (!File.Exists(channeltxt))
+                    {
+                        if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "world"))
+                        {
+                            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "world\\");
+                        }
+                        File.WriteAllText(channeltxt,@"Channel 1,
+Channel 2,
+Channel 3,
+Channel 4,
+Channel 5,
+Channel 6,
+Channel 7,
+Channel 8,
+Channel 9,
+Channel 10,");
+                    }
+                    StreamReader Reader = new StreamReader(channeltxt);
                     if (Reader != null)
                     {
                         string[] Channels = Reader.ReadToEnd().Split(',');

@@ -28,9 +28,13 @@
  *                                                               *
  ***************************************************************** 
 */
+
+using StreetEngine.EngineConsole;
+
 namespace StreetEngine.EngineConfig
 {
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
     using System.Reflection;
     using System.Runtime.InteropServices;
@@ -43,6 +47,8 @@ namespace StreetEngine.EngineConfig
 
         public Dictionary<string, Dictionary<string, string>> Elements = new Dictionary<string, Dictionary<string, string>>();
         public Dictionary<string, string> currentGroup = null;
+
+        public static System.Action<System.String> Event = msg => EngineConsole.Log.Infos("Config.IniConfig", msg);
 
         [DllImport("kernel32")]
         static extern long WritePrivateProfileString(string Section, string Key, string Value, string FilePath);
@@ -85,6 +91,71 @@ namespace StreetEngine.EngineConfig
         public void ReadSettings()
         {
             this.Elements.Clear();
+
+            //Check if config exists
+            if (!File.Exists(this.Path))
+            {
+
+                Event.Invoke("No config.ini found.");
+                File.WriteAllText(this.Path, "; StreetEngine " + FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion + @" config file
+; author link: http://github.com/greatmaes
+; project link: http://github.com/greatmaes/StreetEngine-Emulator
+; chat link: http://gitter.im/greatmaes/StreetEngine-Emulator/~chat#
+; version link: https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/master/VERSION.md 
+; setup link: https://raw.githubusercontent.com/greatmaes/StreetEngine-Emulator/blob/master/README.md
+
+; all comments are optional and can be removed
+; use your local ip '127.0.0.1' to test stuff
+; you can also use a local database
+
+; auth server ip and port
+[Auth]
+Host=127.0.0.1
+Port=443
+
+; world server ip and port
+[World]
+Host=127.0.0.1
+Port=590
+
+; lobby server ip and port
+[Lobby]
+Host=127.0.0.1
+Port=546
+
+; msg server ip and port
+[Msg]
+Host=127.0.0.1
+Port=569
+
+; database server account and additional informations
+[Database]
+Host=null
+User=null
+Password=null
+Database=null
+
+; world settings stuff
+; \""start\"" parameters are stuff that the player save when he creates an account
+; \""MaximumUsers\"" is not only world based, it is for all servers
+[WorldSettings]
+startGpotatos = 999999
+startRupees = 999999
+startQuestPoints = 999999
+startCoins = 999999
+startLevel = 45
+startLiscence = 4
+startType = 3
+MaximumUsers = 500
+
+; Settings of the Client
+; Language must be fr, de or kr
+[GameSettings]
+language=fr
+gameLocation=C:\the\folder\of\streetgears\
+");
+                Event.Invoke("Config.ini created. Please check your SQL Settings!");
+            }
             StreamReader reader = new StreamReader(this.Path);
             while (!reader.EndOfStream)
             {
