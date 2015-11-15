@@ -99,6 +99,6 @@ First 2 bytes of the packet. | Next 2 bytes after the lenght. | 5th byte of the 
 
 # Credits
 - http://github.com/itsexe/ teached me about StreetGear's packets and helping me with login.
-- https://github.com/skeezr/helped me with TCP sockets and SilverSock.
+- http://github.com/skeezr/ helped me with TCP sockets and SilverSock.
 - http://www.elitepvpers.com/forum/members/4193997-k1ramox.html for packets encryption offsets. (*Killer dll*)
 
